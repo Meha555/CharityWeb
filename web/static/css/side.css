@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+.middle{
+  position: absolute;
+  top: 352px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.menu{
+  width: 250px;
+  overflow: hidden;
+}
+.item{
+  border-top: 1px solid transparent;
+  overflow: hidden;
+}
+.btn{
+  display: block;
+  background: transparent;
+  color: white;
+  position: relative;
+}
+.btn:before{
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: rgba(0,0,0,0);
+  left: 30px;
+  bottom: -7px;
+  transform: rotate(45deg);
+}
+.btn i{
+  margin-right: 10px;
+}

@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background: url(../image/login_bg.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 350px;
+    height: 350px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    background: rgba(50, 50, 50, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.header {
+    width: 150px;
+    margin: 0px 250px;
+}
+
+.log {
+    float: left;
+    display: inline;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+}
+
+.reg {
+    float: right;
+    display: inline;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+}
+
+.box .input-box {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.box .input-box label {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 5px;
+}
+
+.box .input-box input {
+    letter-spacing: 1px;
+    font-size: 14px;
+    box-sizing: border-box;
+    width: 250px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+    padding: 0 12px;
+    color: rgba(255, 255, 255, 0.9);
+    transition: 0.2s;
+}
+
+.box .input-box input:focus {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.box .btn-box {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.details-div {
+    width: 100%;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.details-div>div {
+    margin: 0px 15px 0px 0px;
+    padding: 0px;
+    float: left;
+}
+
+.details-div>a {
+    float: right;
+    text-decoration: none;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.details-div>a:hover {
+    color: rgba(234,85,28, 1);
+}
+
+.details-div>a:active {
+    color: purple;
+}
+
+.box .btn-box>div {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-btn {
+    outline: none;
+    margin: 10px 10px 0px 0px;
+    display: block;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.log-btn {
+    width: 120px;
+    height: 35px;
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255,69,0, 0.7);
+    background: rgba(255,69,0, 0.6);
+}
+
+.log-btn:hover {
+    width: 120px;
+    height: 35px;
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(245,118,70, 0.7);
+    background: rgba(245,118,70, 0.5);
+}
+
+.reg-btn {
+    width: 120px;
+    height: 35px;
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(22,212,107, 0.7);
+    background: rgba(22,212,107, 0.6);
+}
+
+.reg-btn:hover {
+    width: 120px;
+    height: 35px;
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(136,227,7, 0.7);
+    background: rgba(136,227,7, 0.5);
+}
+
+.res-btn {
+    width: 120px;
+    height: 35px;
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(37,174,243, 0.7);
+    background: rgba(37,174,243, 0.6);
+}
+
+.res-btn:hover {
+    width: 120px;
+    height: 35px;
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(95,224,230, 0.7);
+    background: rgba(95,224,230, 0.5);
+}
+
+.btn:link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.btn:visited {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.btn:hover {
+    color: yellow;
+    box-shadow: 10px 10px 99px 6px rgba(255,200,29,1);
+}
+
+.btn:active {
+    color: coral;
+    box-shadow: 10px 10px 99px 6px rgba(255,200,29,1);
+}
+
+.content {
+    display: none;
+}
+
+.content.show {
+    display: block;
+}

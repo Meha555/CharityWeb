@@ -1,0 +1,84 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat",sans-serif;
+  background: #f1f1f1;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.set-button{
+  width: 600px;
+  height: 600px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  left: 0;
+  cursor: pointer;
+  transition: .3s linear;
+}
+.set-button:hover{
+  transform: scale(1.1);
+}
+.set-button span{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(17 54 149 / 52%);
+  color: #f1f1f1;
+  text-align: center;
+  line-height: 600px;
+  z-index: 999;
+  transition: .6s linear;
+  border-radius: 300px;
+}
+.set-button:hover span{
+  transform: translateX(-100%);
+  transition-delay: .3s;
+}
+.set-button .box{
+  flex: 1;
+  font-size: 26px;
+  color: #2d3436;
+  text-align: center;
+  text-decoration: none;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: 0.8s linear;
+}
+.set-button:hover .box{
+  opacity: 1;
+  transform: translateX(0);
+}
+.set-button a:nth-of-type(1){
+  transition-delay: 1s;
+}
+.set-button a:nth-of-type(2){
+  transition-delay: 0.8s;
+}
+.set-button a:nth-of-type(3){
+  transition-delay: 0.6s;
+}
+.set-button a:nth-of-type(4){
+  transition-delay: 0.4s;
+}
+.box {
+    position: relative;
+    top: 25px;
+    margin: auto;
+    height: 75px;
+    border:1px solid transparent;
+    line-height: 75px;
+}
+.box:hover {
+   box-shadow: 0 15px 30px  rgba(0, 0, 0, .4);
+   text-shadow: 0 0 5px #f9d367, 0 0 25px #f9d367, 0 0 50px #f9d367, 0 0 100px #f9d367;
+}
+.box i {
+  margin: 0 30px;
+}

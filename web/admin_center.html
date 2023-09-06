@@ -1,0 +1,164 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理员中心</title>
+    <link rel="stylesheet" href="static/css/comment.css">
+    <link rel="stylesheet" href="static/css/leader.css">
+    <link rel="stylesheet" href="static/css/side.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.css">
+    <link rel="stylesheet" href="static/css/iconfont.css">
+    <link rel="stylesheet" href="static/css/iconfont+.css">
+    <style>
+        body {
+            background-size: 100% 100%;
+            background-color: #9999ff;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .root {
+            color: white;
+            margin: 0;
+            padding: 0;
+            width: calc(210px + 6px);
+            height: calc(210px + 5px);
+            border: 1px solid #000;
+        }
+
+        .it {
+            list-style: none;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+            color: white;
+            text-align: center;
+            float: left;
+        }
+
+        .it:nth-child(7n) {
+            border-right: none;
+        }
+
+        .li-head {
+            background-color: deepskyblue;
+            background: rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+<input type="checkbox" id="check">
+<label for="check">
+    <i class="fas fa-bars" id="btn"></i>
+    <i class="fas fa-times" id="cancel"></i>
+</label>
+<div class="sidebar">
+    <!--旁栏leader-->
+    <header><a href="index.html" style="text-decoration: none;color: white;">汇爱儿童资助网</a></header>
+    <ul>
+        <div class="middle">
+            <div class="menu">
+                <li class="item"><a href="" target="_self"><i class="fas fa-stream"></i>管理公益项目</a></li>
+                <li class="item"><a href="" target="_self"><i class="far fa-envelope"></i>管理志愿活动</a>
+                </li>
+                <li class="item" id='profile'>
+                    <a href="" target="_self" class="btn"><i
+                            class="iconfont icon-paper-plane"></i>管理新闻</a>
+                </li>
+                <li class="item"><a href="" target="_self"><i class="fas fa-calendar-week"></i>管理</a></li>
+                <li class="item"><a href="" target="_self"><i
+                        class="far fa-envelope"></i>个人中心</a></li>
+                <li class="item" style="padding: 10px 10px 0 10px;">
+                    <ul id="app" class="root"></ul>
+                    <script>
+                        const LI_HEAD = "<li class='it li-head'>";
+                        const ch = ['日', '一', '二', '三', '四', '五', '六'];
+                        const LI1 = "<li class='it li1'>";
+                        const LI2 = "<li class='it li2'>";
+                        const LI3 = "<li class='it li3'>";
+                        const CLOSE = "</li>";
+                        const NOW = new Date();
+                        const MONTHS = new Date(NOW.getFullYear(), NOW.getMonth() + 1, 0).getDate();
+                        const PRE = new Date(NOW.getFullYear(), NOW.getMonth(), 1).getDay();
+                        for (let i = 0; i < 7; i++) {
+                            document.getElementById("app").innerHTML += LI1 + ch[i] + CLOSE;
+                        }
+                        for (let i = 0; i < PRE; i++) {
+                            document.getElementById("app").innerHTML += LI1 + "-" + CLOSE;
+                        }
+                        for (let i = 0; i < MONTHS; i++) {
+                            document.getElementById("app").innerHTML += LI2 + (i + 1) + CLOSE;
+                        }
+                        for (let i = 0; i < (42 - MONTHS - PRE); i++) {
+                            document.getElementById("app").innerHTML += LI3 + "-" + CLOSE;
+                        }
+                    </script>
+                </li>
+            </div>
+        </div>
+    </ul>
+</div>
+<section></section>
+<div class="box">
+    <div class="abox"><i class="iconfont icon-user-fill"></i>
+        <a href="#">
+            <div class="abox-a"><i class="iconfont icon-user-circle"></i>用户名</div>
+        </a>
+        <a href="#">
+            <div class="abox-a"><i class="fas fa-stream"></i>实名认证</div>
+        </a>
+        <a href="showchildinfoservlet">
+            <div class="abox-a"><i class="iconfont icon-gift"></i>资助对接</div>
+        </a>
+        <a href="#">
+            <div class="abox-a"><i class="iconfont icon-save"></i>卡包</div>
+        </a>
+    </div>
+    <div class="bbox"><br>
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;管理儿童信息</h2>
+        <a href="showchildservlet">
+            <div class="abox-c"><i class="iconfont icon-key"></i>查看儿童信息</div>
+        </a>
+    </div>
+    <div class="bbox"><br>
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;管理奖品</h2>
+        <a href="showrewardservlet" target="_blank">
+            <div class="abox-c"><i class="iconfont icon-share"></i>查看奖品列表</div>
+        </a>
+    </div>
+    <div class="bbox" id="c"><br>
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;管理新闻</h2>
+        <a href="addNews.jsp" title="发布新闻" target="_blank">
+            <div class="abox-c"><i class="iconfont icon-position-fill"></i>发布新闻</div>
+        </a>
+        <a href="shownewsservlet" title="查看新闻列表" target="_blank">
+            <div class="abox-c"><i class="iconfont icon-position-fill"></i>查看新闻列表</div>
+        </a>
+    </div>
+    <div class="bbox"><br>
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;管理公益项目</h2>
+        <a href="showprojectservlet">
+            <div class="abox-c"><i class="far fa-question-circle"></i>查看公益项目</div>
+        </a>
+    </div>
+    <div class="bbox"><br>
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;管理志愿活动</h2>
+        <a href="showapplicationservlet" target="_blank">
+            <div class="abox-c"><i class="far fa-envelope"></i>审核志愿者申请</div>
+        </a>
+        <a href="volunteerList.jsp" target="_blank">
+            <div class="abox-c"><i class="iconfont icon-share"></i>查看志愿者列表</div>
+        </a>
+        <a href="showactivityservlet" title="" target="_blank">
+            <div class="abox-c"><i class="iconfont icon-position-fill"></i>查看志愿活动</div>
+        </a>
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,921 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat",sans-serif;
+  background: #f1f1f1;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.share-button{
+  width: 76%;
+  height: 80px;
+  background: #dfe6e9;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  top: 83%;
+  margin: auto;
+  cursor: pointer;
+  transition: .3s linear;
+}
+.share-button:hover{
+  transform: scale(1.1);
+}
+.share-button span{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(95, 76, 194,0.4);
+  color: #f1f1f1;
+  text-align: center;
+  line-height: 80px;
+  z-index: 999;
+  transition: .6s linear;
+  border-radius: 40px;
+}
+.share-button:hover span{
+  transform: translateX(-100%);
+  transition-delay: .3s;
+}
+.share-button a{
+  flex: 1;
+  font-size: 26px;
+  color: #2d3436;
+  text-align: center;
+  text-decoration: none;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: 0.3s linear;
+}
+.share-button:hover a{
+  opacity: 1;
+  transform: translateX(0);
+}
+.share-button a:nth-of-type(1){
+  transition-delay: 1s;
+}
+.share-button a:nth-of-type(2){
+  transition-delay: 0.8s;
+}
+.share-button a:nth-of-type(3){
+  transition-delay: 0.6s;
+}
+.share-button a:nth-of-type(4){
+  transition-delay: 0.4s;
+}
+ /*样式初始化*/
+            * {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+            /*去除横向滚动条*/
+            body {
+                overflow-x: hidden;
+            }
+
+            /* 标题 */
+            .introduction{
+              position: absolute;
+              top: 20px;
+              font: 80px 楷体;;
+              font-weight:bold;
+              color: rgb(0, 0, 0);
+              text-shadow: 0 0 10px rgb(255, 255, 255),0 0 20px rgb(255, 255, 255),0 0 30px rgb(255, 255, 255),0 0 40px rgb(255, 255, 255);;
+            }
+
+            /*定位*/
+            .conlist1 {
+              position: absolute;
+              top: 36px;
+              left: 226px;
+            }
+            .conlist2 {
+              position: absolute;
+              top: 162px;
+              left: 226px;
+            }
+            .conlist3 {
+              position: absolute;
+              top: 288px;
+              left: 100px;
+            }
+            .conlist4 {
+              position: absolute;
+              top: 414px;
+              left: 226px;
+            }
+            .conlist5 {
+              position: absolute;
+              top: 162px;
+              left: 409px;
+            }
+            .conlist6 {
+              position: absolute;
+              top: 36px;
+              left: 535px;
+            }
+            .conlist7 {
+              position: absolute;
+              top: 414px;
+              left: 409px;
+            }
+            .conlist8 {
+              position: absolute;
+              top: 288px;
+              left: 661px;
+            }
+            .conlist9 {
+              position: absolute;
+              top: 36px;
+              left: 844px;
+            }
+            .conlist10 {
+              position: absolute;
+              top: 162px;
+              left: 970px;
+            }
+            .conlist11 {
+              position: absolute;
+              top: 288px;
+              left: 844px;
+            }
+            .conlist12 {
+              position: absolute;
+              top: 414px;
+              left: 970px;
+            }
+            .conlist13 {
+              position: absolute;
+              top: 36px;
+              left: 1153px;
+            }
+            .conlist14 {
+              position: absolute;
+              top: 288px;
+              left: 1153px;
+            }
+            .conlist15 {
+              position: absolute;
+              top: 414px;
+              left: 1279px;
+            }
+            /* 空白 */
+            .conlist16 {
+              position: absolute;
+              top: 36px;
+              left: 100px;
+            }
+            .conlist17 {
+              position: absolute;
+              top: 414px;
+              left: 100px;
+            }
+            .conlist18 {
+              position: absolute;
+              top: 36px;
+              left: 409px;
+            }
+            .conlist19 {
+              position: absolute;
+              top: 288px;
+              left: 409px;
+            }
+            .conlist20 {
+              position: absolute;
+              top: 414px;
+              left: 535px;
+            }
+            .conlist21 {
+              position: absolute;
+              top: 414px;
+              left: 661px;
+            }
+            .conlist22 {
+              position: absolute;
+              top: 162px;
+              left: 661px;
+            }
+            .conlist23 {
+              position: absolute;
+              top: 36px;
+              left: 661px;
+            }
+            .conlist24 {
+              position: absolute;
+              top: 36px;
+              left: 970px;
+            }
+            .conlist25 {
+              position: absolute;
+              top: 414px;
+              left: 844px;
+            }
+            .conlist26 {
+              position: absolute;
+              top: 36px;
+              left: 1279px;
+            }
+            .conlist27 {
+              position: absolute;
+              top: 162px;
+              left: 1279px;
+            }
+            .conlist28 {
+              position: absolute;
+              top: 414px;
+              left: 1153px;
+            }
+            /*设置li的样式*/
+            .conlist1 li {
+                position: relative;
+                width: 50px;
+                height: 180px;
+                display: block;
+                text-align: center;
+                background-color:transparent;
+            }
+            .conlist2 li {
+              position: relative;
+              width: 50px;
+              height: 180px;
+              display: block;
+              text-align: center;
+              background-color:transparent;
+            }
+            .conlist3 li {
+              position: relative;
+              width: 50px;
+              height: 180px;
+              display: block;
+              text-align: center;
+              background-color:transparent;
+            }
+            .conlist4 li {
+              position: relative;
+              width: 50px;
+              height: 180px;
+              display: block;
+              text-align: center;
+              background-color:transparent;
+            }
+            .conlist5 li {
+                position: relative;
+                width: 50px;
+                height: 180px;
+                display: block;
+                text-align: center;
+                background-color:transparent;
+            }
+            .conlist6 li {
+              position: relative;
+              width: 50px;
+              height: 180px;
+              display: block;
+              text-align: center;
+              background-color:transparent;
+            }
+            .conlist7 li {
+              position: relative;
+              width: 50px;
+              height: 180px;
+              display: block;
+              text-align: center;
+              background-color:transparent;
+            }
+            .conlist8 li {
+              position: relative;
+              width: 50px;
+              height: 180px;
+              display: block;
+              text-align: center;
+              background-color:transparent;
+            }
+            .conlist9 li {
+                position: relative;
+                width: 50px;
+                height: 180px;
+                display: block;
+                text-align: center;
+                background-color:transparent;
+            }
+            .conlist10 li {
+              position: relative;
+              width: 50px;
+              height: 180px;
+              display: block;
+              text-align: center;
+              background-color:transparent;
+            }
+            .conlist11 li {
+              position: relative;
+              width: 50px;
+              height: 180px;
+              display: block;
+              text-align: center;
+              background-color:transparent;
+            }
+            .conlist12 li {
+              position: relative;
+              width: 50px;
+              height: 180px;
+              display: block;
+              text-align: center;
+              background-color:transparent;
+            }
+            .conlist13 li {
+              position: relative;
+              width: 50px;
+              height: 180px;
+              display: block;
+              text-align: center;
+              background-color:transparent;
+            }
+            .conlist14 li {
+              position: relative;
+              width: 50px;
+              height: 180px;
+              display: block;
+              text-align: center;
+              background-color:transparent;
+            }
+            .conlist15 li {
+              position: relative;
+              width: 50px;
+              height: 180px;
+              display: block;
+              text-align: center;
+              background-color:transparent;
+            }
+            /* 空白 */
+            .conlist16 li {
+              position: relative;
+              width: 50px;
+              height: 180px;
+              display: block;
+              text-align: center;
+              background-color:transparent;
+            }
+            .conlist17 li {
+              position: relative;
+              width: 50px;
+              height: 180px;
+              display: block;
+              text-align: center;
+              background-color:transparent;
+            }
+            .conlist18 li {
+              position: relative;
+              width: 50px;
+              height: 180px;
+              display: block;
+              text-align: center;
+              background-color:transparent;
+            }
+            .conlist19 li {
+              position: relative;
+              width: 50px;
+              height: 180px;
+              display: block;
+              text-align: center;
+              background-color:transparent;
+            }
+            .conlist20 li {
+              position: relative;
+              width: 50px;
+              height: 180px;
+              display: block;
+              text-align: center;
+              background-color:transparent;
+            }
+            .conlist21 li {
+              position: relative;
+              width: 50px;
+              height: 180px;
+              display: block;
+              text-align: center;
+              background-color:transparent;
+            }
+            .conlist22 li {
+              position: relative;
+              width: 50px;
+              height: 180px;
+              display: block;
+              text-align: center;
+              background-color:transparent;
+            }
+            .conlist23 li {
+              position: relative;
+              width: 50px;
+              height: 180px;
+              display: block;
+              text-align: center;
+              background-color:transparent;
+            }
+            .conlist24 li {
+              position: relative;
+              width: 50px;
+              height: 180px;
+              display: block;
+              text-align: center;
+              background-color:transparent;
+            }
+            .conlist25 li {
+              position: relative;
+              width: 50px;
+              height: 180px;
+              display: block;
+              text-align: center;
+              background-color:transparent;
+            }
+            .conlist26 li {
+              position: relative;
+              width: 50px;
+              height: 180px;
+              display: block;
+              text-align: center;
+              background-color:transparent;
+            }
+            .conlist27 li {
+              position: relative;
+              width: 50px;
+              height: 180px;
+              display: block;
+              text-align: center;
+              background-color:transparent;
+            }
+            .conlist28 li {
+              position: relative;
+              width: 50px;
+              height: 180px;
+              display: block;
+              text-align: center;
+              background-color:transparent;
+            }
+            /*设置a标签的样式*/
+            .conlist1 a {
+                position: absolute;
+                display: block;
+                width: 120px;
+                height: 120px;
+                border: 3px solid rgb(255, 255, 255);
+                background-position: center;
+                background-clip: border-box;
+                background-size: cover;
+                left: 50%;
+                top: 65%;
+                color: black;
+                box-shadow:0px 0px 30px white;
+            }
+            .conlist2 a {
+              position: absolute;
+              display: block;
+              width: 120px;
+              height: 120px;
+              border: 3px solid rgb(255, 255, 255);
+              background-position: center;
+              background-clip: border-box;
+              background-size: cover;
+              left: 50%;
+              top: 65%;
+              color: black;
+              box-shadow:0px 0px 30px white;
+            }
+            .conlist3 a {
+              position: absolute;
+              display: block;
+              width: 120px;
+              height: 120px;
+              border: 3px solid rgb(255, 255, 255);
+              background-position: center;
+              background-clip: border-box;
+              background-size: cover;
+              left: 50%;
+              top: 65%;
+              color: black;
+              box-shadow:0px 0px 30px white;
+            }
+            .conlist4 a {
+              position: absolute;
+              display: block;
+              width: 120px;
+              height: 120px;
+              border: 3px solid rgb(255, 255, 255);
+              background-position: center;
+              background-clip: border-box;
+              background-size: cover;
+              left: 50%;
+              top: 65%;
+              color: black;
+              box-shadow:0px 0px 30px white;
+            }
+            .conlist5 a {
+                position: absolute;
+                display: block;
+                width: 120px;
+                height: 120px;
+                border: 3px solid rgb(255, 255, 255);
+                background-position: center;
+                background-clip: border-box;
+                background-size: cover;
+                left: 50%;
+                top: 65%;
+                color: black;
+                box-shadow:0px 0px 30px white;
+            }
+            .conlist6 a {
+              position: absolute;
+              display: block;
+              width: 120px;
+              height: 120px;
+              border: 3px solid rgb(255, 255, 255);
+              background-position: center;
+              background-clip: border-box;
+              background-size: cover;
+              left: 50%;
+              top: 65%;
+              color: black;
+              box-shadow:0px 0px 30px white;
+            }
+            .conlist7 a {
+              position: absolute;
+              display: block;
+              width: 120px;
+              height: 120px;
+              border: 3px solid rgb(255, 255, 255);
+              background-position: center;
+              background-clip: border-box;
+              background-size: cover;
+              left: 50%;
+              top: 65%;
+              color: black;
+              box-shadow:0px 0px 30px white;
+            }
+            .conlist8 a {
+              position: absolute;
+              display: block;
+              width: 120px;
+              height: 120px;
+              border: 3px solid rgb(255, 255, 255);
+              background-position: center;
+              background-clip: border-box;
+              background-size: cover;
+              left: 50%;
+              top: 65%;
+              color: black;
+              box-shadow:0px 0px 30px white;
+            }
+            .conlist9 a {
+                position: absolute;
+                display: block;
+                width: 120px;
+                height: 120px;
+                border: 3px solid rgb(255, 255, 255);
+                background-position: center;
+                background-clip: border-box;
+                background-size: cover;
+                left: 50%;
+                top: 65%;
+                color: black;
+                box-shadow:0px 0px 30px white;
+            }
+            .conlist10 a {
+              position: absolute;
+              display: block;
+              width: 120px;
+              height: 120px;
+              border: 3px solid rgb(255, 255, 255);
+              background-position: center;
+              background-clip: border-box;
+              background-size: cover;
+              left: 50%;
+              top: 65%;
+              color: black;
+              box-shadow:0px 0px 30px white;
+            }
+            .conlist11 a {
+              position: absolute;
+              display: block;
+              width: 120px;
+              height: 120px;
+              border: 3px solid rgb(255, 255, 255);
+              background-position: center;
+              background-clip: border-box;
+              background-size: cover;
+              left: 50%;
+              top: 65%;
+              color: black;
+              box-shadow:0px 0px 30px white;
+            }
+            .conlist12 a {
+              position: absolute;
+              display: block;
+              width: 120px;
+              height: 120px;
+              border: 3px solid rgb(255, 255, 255);
+              background-position: center;
+              background-clip: border-box;
+              background-size: cover;
+              left: 50%;
+              top: 65%;
+              color: black;
+              box-shadow:0px 0px 30px white;
+            }
+            .conlist13 a {
+                position: absolute;
+                display: block;
+                width: 120px;
+                height: 120px;
+                border: 3px solid rgb(255, 255, 255);
+                background-position: center;
+                background-clip: border-box;
+                background-size: cover;
+                left: 50%;
+                top: 65%;
+                color: black;
+                box-shadow:0px 0px 30px white;
+            }
+            .conlist14 a {
+              position: absolute;
+              display: block;
+              width: 120px;
+              height: 120px;
+              border: 3px solid rgb(255, 255, 255);
+              background-position: center;
+              background-clip: border-box;
+              background-size: cover;
+              left: 50%;
+              top: 65%;
+              color: black;
+              box-shadow:0px 0px 30px white;
+            }
+            .conlist15 a {
+              position: absolute;
+              display: block;
+              width: 120px;
+              height: 120px;
+              border: 3px solid rgb(255, 255, 255);
+              background-position: center;
+              background-clip: border-box;
+              background-size: cover;
+              left: 50%;
+              top: 65%;
+              color: black;
+              box-shadow:0px 0px 30px white;
+            }
+            /* 空白 */
+            .conlist16 a {
+              position: absolute;
+              display: block;
+              width: 120px;
+              height: 120px;
+              border: 3px solid rgb(255, 255, 255);
+              background-position: center;
+              background-clip: border-box;
+              background-size: cover;
+              left: 50%;
+              top: 65%;
+              color: black;
+              box-shadow:0px 0px 30px white;
+            }
+            .conlist17 a {
+              position: absolute;
+              display: block;
+              width: 120px;
+              height: 120px;
+              border: 3px solid rgb(255, 255, 255);
+              background-position: center;
+              background-clip: border-box;
+              background-size: cover;
+              left: 50%;
+              top: 65%;
+              color: black;
+              box-shadow:0px 0px 30px white;
+            }
+            .conlist18 a {
+              position: absolute;
+              display: block;
+              width: 120px;
+              height: 120px;
+              border: 3px solid rgb(255, 255, 255);
+              background-position: center;
+              background-clip: border-box;
+              background-size: cover;
+              left: 50%;
+              top: 65%;
+              color: black;
+              box-shadow:0px 0px 30px white;
+            }
+            .conlist19 a {
+              position: absolute;
+              display: block;
+              width: 120px;
+              height: 120px;
+              border: 3px solid rgb(255, 255, 255);
+              background-position: center;
+              background-clip: border-box;
+              background-size: cover;
+              left: 50%;
+              top: 65%;
+              color: black;
+              box-shadow:0px 0px 30px white;
+            }
+            .conlist20 a {
+              position: absolute;
+              display: block;
+              width: 120px;
+              height: 120px;
+              border: 3px solid rgb(255, 255, 255);
+              background-position: center;
+              background-clip: border-box;
+              background-size: cover;
+              left: 50%;
+              top: 65%;
+              color: black;
+              box-shadow:0px 0px 30px white;
+            }
+            .conlist21 a {
+              position: absolute;
+              display: block;
+              width: 120px;
+              height: 120px;
+              border: 3px solid rgb(255, 255, 255);
+              background-position: center;
+              background-clip: border-box;
+              background-size: cover;
+              left: 50%;
+              top: 65%;
+              color: black;
+              box-shadow:0px 0px 30px white;
+            }
+            .conlist22 a {
+              position: absolute;
+              display: block;
+              width: 120px;
+              height: 120px;
+              border: 3px solid rgb(255, 255, 255);
+              background-position: center;
+              background-clip: border-box;
+              background-size: cover;
+              left: 50%;
+              top: 65%;
+              color: black;
+              box-shadow:0px 0px 30px white;
+            }
+            .conlist23 a {
+              position: absolute;
+              display: block;
+              width: 120px;
+              height: 120px;
+              border: 3px solid rgb(255, 255, 255);
+              background-position: center;
+              background-clip: border-box;
+              background-size: cover;
+              left: 50%;
+              top: 65%;
+              color: black;
+              box-shadow:0px 0px 30px white;
+            }
+            .conlist24 a {
+              position: absolute;
+              display: block;
+              width: 120px;
+              height: 120px;
+              border: 3px solid rgb(255, 255, 255);
+              background-position: center;
+              background-clip: border-box;
+              background-size: cover;
+              left: 50%;
+              top: 65%;
+              color: black;
+              box-shadow:0px 0px 30px white;
+            }
+            .conlist25 a {
+              position: absolute;
+              display: block;
+              width: 120px;
+              height: 120px;
+              border: 3px solid rgb(255, 255, 255);
+              background-position: center;
+              background-clip: border-box;
+              background-size: cover;
+              left: 50%;
+              top: 65%;
+              color: black;
+              box-shadow:0px 0px 30px white;
+            }
+            .conlist26 a {
+              position: absolute;
+              display: block;
+              width: 120px;
+              height: 120px;
+              border: 3px solid rgb(255, 255, 255);
+              background-position: center;
+              background-clip: border-box;
+              background-size: cover;
+              left: 50%;
+              top: 65%;
+              color: black;
+              box-shadow:0px 0px 30px white;
+            }
+            .conlist27 a {
+              position: absolute;
+              display: block;
+              width: 120px;
+              height: 120px;
+              border: 3px solid rgb(255, 255, 255);
+              background-position: center;
+              background-clip: border-box;
+              background-size: cover;
+              left: 50%;
+              top: 65%;
+              color: black;
+              box-shadow:0px 0px 30px white;
+            }
+            .conlist28 a {
+              position: absolute;
+              display: block;
+              width: 120px;
+              height: 120px;
+              border: 3px solid rgb(255, 255, 255);
+              background-position: center;
+              background-clip: border-box;
+              background-size: cover;
+              left: 50%;
+              top: 65%;
+              color: black;
+              box-shadow:0px 0px 30px white;
+            }
+            /*设置a标签的背景图片*/
+            .a1 {background-image: url(../images/Dong/短道速滑.jpg);}
+            .a2 {background-image: url(../images/Dong/冬季两项.jpg);}
+            .a3 {background-image: url(../images/Dong/速度滑冰.jpg);}
+            .a4 {background-image: url(../images/Dong/北欧两项.jpg);}
+            .a5 {background-image: url(../images/Dong/花样滑冰.jpg);}
+            .a11 {background-image: url(../images/Dong/冰球.jpg);}
+            .a12 {background-image: url(../images/Dong/雪橇.jpg);}
+            .a13 {background-image: url(../images/Dong/高山滑雪.jpg);}
+            .a14 {background-image: url(../images/Dong/冰壶.jpg);}
+            .a15 {background-image: url(../images/Dong/雪车.jpg);}
+            .a16 {background-image: url(../images/Dong/越野滑雪.jpg);}
+            .a17 {background-image: url(../images/Dong/跳台滑雪.jpg);}
+            .a18 {background-image: url(../images/Dong/自由式滑雪.jpg);}
+            .a19 {background-image: url(../images/Dong/单板滑雪.jpg);}
+            .a20 {background-image: url(../images/Dong/钢架雪车.jpg);}
+            /* 空白 */
+            .a21{background-image: url(../images/Dong/空白1.bmp);}
+            .a22{background-image: url(../images/Dong/空白2.bmp);}
+            .a23{background-image: url(../images/Dong/空白3.bmp);}
+            .a24{background-image: url(../images/Dong/空白8.bmp);}
+            .a25{background-image: url(../images/Dong/空白7.bmp);}
+            .a26{background-image: url(../images/Dong/空白6.bmp);}
+            .a27{background-image: url(../images/Dong/空白5.bmp);}
+            .a28{background-image: url(../images/Dong/空白4.bmp);}
+            .a29{background-image: url(../images/Dong/空白9.bmp);}
+            .a30{background-image: url(../images/Dong/空白2.bmp);}
+            .a31{background-image: url(../images/Dong/空白7.bmp);}
+            .a32{background-image: url(../images/Dong/空白1.bmp);}
+            .a33{background-image: url(../images/Dong/空白3.bmp);}
+
+    /*文章a:hover拉开拓展信息*/
+    .a1:hover,
+    .a2:hover,
+    .a3:hover,
+    .a4:hover,
+    .a5:hover,
+    .a11:hover,
+    .a12:hover,
+    .a13:hover,
+    .a14:hover,
+    .a15:hover,
+    .a16:hover,
+    .a17:hover,
+    .a18:hover,
+    .a19:hover,
+    .a20:hover
+     {
+        background-image: url("../images/Dong/冬奥图标.jpg");
+    }
+    .a1:hover>#article,
+    .a2:hover>#article,
+    .a3:hover>#article,
+    .a4:hover>#article,
+    .a5:hover>#article,
+    .a11:hover>#article,
+    .a12:hover>#article,
+    .a13:hover>#article,
+    .a14:hover>#article,
+    .a15:hover>#article,
+    .a16:hover>#article,
+    .a17:hover>#article,
+    .a18:hover>#article,
+    .a19:hover>#article,
+    .a20:hover>#article
+     {
+        display: block;
+    }

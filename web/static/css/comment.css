@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(#99f,lightblue,#e9ddb6,#edc3ae); 
+}
+.box {
+    position: relative;
+    top: 25px;
+    margin: auto;
+    width: 1125px;
+    height: 800px;
+    background-color: transparent;
+    border-radius:50px;
+}
+.abox {
+    float: left;
+    margin-top: 30px;
+    margin-left: 25px;
+    width: 250px;
+    height: 600px;
+    background-color: rgba(255,255,255,.7);
+    border-radius: 50px;
+}
+.bbox {
+    float: right;
+    overflow: hidden;
+    margin-left: 25px;
+    margin-top: 30px;
+    width: 250px;
+    height: 310px;
+    background-color: rgba(255,255,255,.7);
+    border-radius:20%;
+}
+.box #b {
+  width: 800px;
+  border-radius: 0 50px;
+  margin-right: 25px;
+  background-color:rgba(255,255,255,.7); 
+}
+.box #c {
+  margin-right: 25px;
+}
+.abox i {
+  font-size: 100px;
+  margin-left: 75px;
+  color: rgba(0,0,0,.6);
+   
+}
+.bbox i {
+ font-size: 80px;
+ margin-left: 85px;
+ color: rgba(0,0,0,.6);
+}
+.abox-a {
+    width: 100%;
+    height: 10%;
+    border: 1px solid transparent;
+    line-height: 74px;
+}
+.abox-b {
+    display: inline-block;
+    width: 23%;
+    height: 100%;
+    margin-left: 10px;
+    border: 1px solid transparent;
+    line-height: 355px;
+    /*text-shadow: 0 0 5px #f9d367, 0 0 25px #f9d367, 0 0 50px #f9d367, 0 0 100px #f9d367;*/
+}
+.abox-c {
+    width: 100%;
+    height: 15%;
+    border: 1px solid transparent;
+    line-height: 71px;
+}
+.abox a,.bbox a {
+    text-decoration: none;
+    color: rgba(0,0,0,.6);
+    font: 18px 微软雅黑;;
+}
+.abox .abox-a i {
+    font-size: 30px;
+    margin: 0 25px;
+}
+.bbox .abox-b i {
+    font-size: 45px;
+    margin: 0 25px;
+}
+.bbox .abox-c i {
+    font-size: 30px;
+    margin: 0 25px;
+}
+.abox .abox-a:hover {
+    box-shadow: 0 15px 30px  rgba(0, 0, 0, .4);
+    text-shadow: 0 0 5px #f0a1a8, 0 0 25px #f0a1a8, 0 0 50px #f0a1a8, 0 0 100px #f0a1a8;
+}
+   /* box-shadow: 0 0 5px #f9d367, 0 0 25px #f9d367, 0 0 50px #f9d367, 0 0 100px #f9d367;*/
+.abox-b:hover {
+    box-shadow: 0 15px 30px  rgba(0, 0, 0, .4);
+     text-shadow: 0 0 5px #f9d367, 0 0 25px #f9d367, 0 0 50px #f9d367, 0 0 100px #f9d367;
+}
+.abox-c:hover {
+    box-shadow: 0 15px 30px  rgba(0, 0, 0, .4);
+    text-shadow: 0 0 5px #8abcd1, 0 0 25px #8abcd1, 0 0 50px #8abcd1, 0 0 100px #8abcd1;
+}
+.document {
+    width: 1200px;
+    height: 700px;
+    background-color: rgba(255,255,255,.7);
+    box-shadow: 0 15px 30px  rgba(0, 0, 0, .4);
+}

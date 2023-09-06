@@ -1,0 +1,60 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>志愿板块</title>
+    <link rel="stylesheet" href="static/css/comment.css">
+    <link rel="stylesheet" href="static/css/leader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.css">
+    <link rel="stylesheet" href="static/css/side.css">
+    <link rel="stylesheet" href="static/css/set.css">
+    <link rel="stylesheet" href="static/css/iconfont.css">
+    <link rel="stylesheet" href="static/css/iconfont+.css">
+    <style>
+        body{
+            background-size: 100% 100%;
+            background-color: #00aced;
+            background-image: url("static/picture/index_bg.jpg");
+            background-repeat: no-repeat;
+            background-attachment : fixed;
+        }
+        .root{
+            color: white;
+            margin: 0;
+            padding: 0;
+            width: calc(210px + 6px);
+            height: calc(210px + 5px);
+            border: 1px solid #000;
+        }
+        .it {
+            list-style: none;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+            color: white;
+            text-align: center;
+            float: left;
+        }
+        .it:nth-child(7n){
+            border-right: none;
+        }
+        .li-head{
+            background-color: deepskyblue;
+            background: rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+<div class="set-button">
+    <span style="font-size: 40px;"><i class="fas fa-cog"></i>&nbsp;&nbsp; 志愿者模块</span>
+    <div class="set">
+        <a href="daka.html"><div class="box"><i class="fas fa-calendar-week"></i>活动打卡</div></a>
+        <a href="rewardinfoservlet"><div class="box"><i class="iconfont icon-applicationgroup"></i>兑换礼品</div></a>
+        <a href="applyforVolunteer.jsp"><div class="box"><i class="fas fa-qrcode"></i>申请加入</div></a>
+    </div>
+</div>
+</body>
+</html>

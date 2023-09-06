@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录/注册</title>
+    <link rel="stylesheet" type="text/css" href="static/css/login.css">
+</head>
+<body>
+<form id="form1" action="loginregister" method="post" onsubmit="subcheck()">
+<div class="box">
+    <div class="header">
+        <h2 class="log"><a class="btn" href="#">登录</a></h2>
+        <h2 class="reg"><a class="btn" href="#">注册</a></h2>
+        <hr width="100%" size="2px" color="orange"/>
+    </div>
+    <div class="input-box">
+        <span><label for="id">账号</label><span id="msgid" style="font-size: 12px;color: red;float: right;font-weight: bold"></span></span>
+        <input type="text" id="id" name="id" placeholder="请输入账号ID" required/>
+    </div>
+    <div class="input-box">
+        <span><label for="pwd">密码</label><span id="msgpwd" style="font-size: 12px;color: red;float: right;font-weight: bold"></span></span>
+        <input type="password" id="pwd" name="pwd" placeholder="不超过10个字符" maxlength="10" required/>
+    </div>
+    <div class="btn-box">
+        <div class="details-div">
+            <div>
+                用户组：<!--用户组的选择也是input，通过表单提交-->
+                <input type="radio" id="user" name="group" value="user" checked>
+                <label for="user">用户</label>
+                <input type="radio" id="admin" name="group" value="admin">
+                <label for="admin">管理员</label>
+            </div>
+            <a href="resetPwd.jsp">&nbsp;&nbsp;忘记密码</a>
+        </div>
+        <div>
+            <div class="content show"><input id="log" type="submit" name="subbtn" value="登录" class="input-btn log-btn"></div>
+            <div class="content"><input id="reg" type="submit" name="subbtn" value="注册" class="input-btn reg-btn"></div>
+            <input type="reset" class="input-btn res-btn">
+        </div>
+    </div>
+</div>
+</form>
+<script type="text/javascript">
+    //获取页面的每个btn按钮
+    var btns = document.getElementsByClassName("btn")
+    var contents = document.getElementsByClassName("content")
+    //遍历每个btn按钮为其添加点击事件
+    for (let i = 0; i < btns.length; i++) {
+        btns[i].index = i;
+        btns[i].onclick = function () {
+            for (let j = 0; j < btns.length; j++) {
+                contents[j].className = contents[j].className.replace(' show', '').trim();
+            }
+            contents[this.index].className = contents[this.index].className + ' show';
+        };
+    }
+    var regexp_pwd = new RegExp("^[a-zA-Z]\\w{5,10}$");//校验密码的正则表达式，只能以字母开头，长度在6~11之间，只能包含字母、数字和下划线
+    var id=document.getElementById("id");
+    var pwd=document.getElementById("pwd");
+    id.onblur=checkID;
+    pwd.onblur=checkPWD;
+    function checkID(){
+        var flag;
+        if(id.value==""){
+            document.getElementById("msgid").innerHTML="账号ID不能为空";
+            flag=false;
+        }
+        else{
+            document.getElementById("msgid").innerHTML="";
+            flag=true;
+        }
+        return flag;
+    }
+    function checkPWD(){
+        var flag;
+        if(pwd.value==""){
+            document.getElementById("msgpwd").innerHTML="密码不能为空";
+            flag=false;
+        }
+        else{
+            document.getElementById("msgpwd").innerHTML="";
+            flag=true;
+        }
+        if(!(regexp_pwd.test(pwd.value.trim()))){
+            document.getElementById("msgpwd").innerHTML="密码由6~11位字母数字下划线组成";
+            flag=false;
+        }
+        else{
+            document.getElementById("msgpwd").innerHTML="";
+            flag=true;
+        }
+        return flag;
+    }
+    function subcheck(){
+        var flag=checkID()&&checkPWD();
+        document.getElementById("log").value="Login";
+        document.getElementById("reg").value="Register";
+        return flag;
+    }
+</script>
+</body>
+</html>
